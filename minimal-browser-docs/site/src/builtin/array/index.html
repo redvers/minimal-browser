@@ -1,0 +1,3606 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>array.pony - minimal-browser</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "array.pony";
+    var mkdocs_page_input_path = "src/builtin/array.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> minimal-browser</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">minimal-browser</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">package minimal-browser</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser--index/">Package</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-AppModel/">class AppModel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-AppController/">actor AppController</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-Main/">actor Main</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-AppCallbacks/">class AppCallbacks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">package builtin</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../builtin--index/">Package</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-U8/">primitive U8</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-U16/">primitive U16</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-U32/">primitive U32</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-U64/">primitive U64</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ULong/">primitive ULong</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-USize/">primitive USize</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-U128/">primitive U128</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Unsigned/">type Unsigned</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Stringable/">interface Stringable</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-String/">class String</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-StringBytes/">class StringBytes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-StringRunes/">class StringRunes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_UTF32Encoder/">primitive _UTF32Encoder</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-InputNotify/">interface InputNotify</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-InputStream/">interface InputStream</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Stdin/">actor Stdin</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ByteSeq/">type ByteSeq</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ByteSeqIter/">interface ByteSeqIter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-OutStream/">interface OutStream</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-StdStream/">actor StdStream</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-SourceLoc/">interface SourceLoc</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-I8/">primitive I8</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-I16/">primitive I16</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-I32/">primitive I32</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-I64/">primitive I64</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ILong/">primitive ILong</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ISize/">primitive ISize</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-I128/">primitive I128</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Signed/">type Signed</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Seq/">interface Seq</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-RuntimeOptions/">struct RuntimeOptions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_ArithmeticConvertible/">trait _ArithmeticConvertible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Real/">trait Real</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Integer/">trait Integer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-SignedInteger/">trait SignedInteger</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-UnsignedInteger/">trait UnsignedInteger</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-FloatingPoint/">trait FloatingPoint</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Number/">type Number</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Int/">type Int</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ReadSeq/">interface ReadSeq</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ReadElement/">interface ReadElement</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Pointer/">struct Pointer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Platform/">primitive Platform</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-NullablePointer/">struct NullablePointer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-None/">primitive None</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Iterator/">interface Iterator</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-F32/">primitive F32</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-F64/">primitive F64</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Float/">type Float</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Env/">class Env</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-DoNotOptimise/">primitive DoNotOptimise</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-DisposableActor/">interface DisposableActor</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Less/">primitive Less</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Equal/">primitive Equal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Greater/">primitive Greater</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Compare/">type Compare</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-HasEq/">interface HasEq</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Equatable/">interface Equatable</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Comparable/">interface Comparable</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Bool/">primitive Bool</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-AsioEventID/">type AsioEventID</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-AsioEventNotify/">interface AsioEventNotify</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-AsioEvent/">primitive AsioEvent</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Array/">class Array</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ArrayKeys/">class ArrayKeys</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ArrayValues/">class ArrayValues</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-ArrayPairs/">class ArrayPairs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-Any/">interface Any</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-AmbientAuth/">primitive AmbientAuth</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_ToString/">primitive _ToString</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_SignedArithmetic/">primitive _SignedArithmetic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_SignedUnsafeArithmetic/">primitive _SignedUnsafeArithmetic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_UnsignedCheckedArithmetic/">primitive _UnsignedCheckedArithmetic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_SignedCheckedArithmetic/">primitive _SignedCheckedArithmetic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_PartialArithmetic/">trait _PartialArithmetic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_UnsignedPartialArithmetic/">primitive _UnsignedPartialArithmetic</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../builtin-_SignedPartialArithmetic/">primitive _SignedPartialArithmetic</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">package debug</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../debug--index/">Package</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../debug-DebugOut/">primitive DebugOut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../debug-DebugErr/">primitive DebugErr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../debug-DebugStream/">type DebugStream</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../debug-Debug/">primitive Debug</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">package gtk3</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../gtk3--index/">Package</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GApplicationFlags/">primitive GApplicationFlags</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindowType/">type GtkWindowType</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindowToplevel/">primitive GtkWindowToplevel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindowPopup/">primitive GtkWindowPopup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindowPosition/">type GtkWindowPosition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWinPosNone/">primitive GtkWinPosNone</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWinPosCenter/">primitive GtkWinPosCenter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWinPosMouse/">primitive GtkWinPosMouse</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWinPosCenterAlways/">primitive GtkWinPosCenterAlways</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWinPosCenterOnParent/">primitive GtkWinPosCenterOnParent</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindowGroup/">class GtkWindowGroup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindowAccessible/">class GtkWindowAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWindow/">class GtkWindow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWidgetAccessible/">class GtkWidgetAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkWidget/">trait GtkWidget</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVolumeButton/">class GtkVolumeButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkViewport/">class GtkViewport</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVSeparator/">class GtkVSeparator</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVScrollbar/">class GtkVScrollbar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVScale/">class GtkVScale</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVPaned/">class GtkVPaned</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVButtonBox/">class GtkVButtonBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkVBox/">class GtkVBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkUIManager/">class GtkUIManager</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTreeViewAccessible/">class GtkTreeViewAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTreeSelection/">class GtkTreeSelection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTreeModelFilter/">class GtkTreeModelFilter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToplevelAccessible/">class GtkToplevelAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTooltip/">class GtkTooltip</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToolbar/">class GtkToolbar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToolPalette/">class GtkToolPalette</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToolItemGroup/">class GtkToolItemGroup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToolItem/">class GtkToolItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToolButton/">class GtkToolButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToggleToolButton/">class GtkToggleToolButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToggleButtonAccessible/">class GtkToggleButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToggleButton/">class GtkToggleButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkToggleAction/">class GtkToggleAction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkThemingEngine/">class GtkThemingEngine</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextViewAccessible/">class GtkTextViewAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextView/">class GtkTextView</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextTagTable/">class GtkTextTagTable</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextTag/">class GtkTextTag</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextMark/">class GtkTextMark</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextChildAnchor/">class GtkTextChildAnchor</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextCellAccessible/">class GtkTextCellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTextBuffer/">class GtkTextBuffer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTearoffMenuItem/">class GtkTearoffMenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkTable/">class GtkTable</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSwitchAccessible/">class GtkSwitchAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSwitch/">class GtkSwitch</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStyleProperties/">class GtkStyleProperties</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStyleContext/">class GtkStyleContext</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStyle/">class GtkStyle</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStatusbarAccessible/">class GtkStatusbarAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStatusbar/">class GtkStatusbar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStackSwitcher/">class GtkStackSwitcher</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStackSidebar/">class GtkStackSidebar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStackAccessible/">class GtkStackAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkStack/">class GtkStack</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSpinnerAccessible/">class GtkSpinnerAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSpinner/">class GtkSpinner</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSpinButtonAccessible/">class GtkSpinButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSpinButton/">class GtkSpinButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSocketAccessible/">class GtkSocketAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSocket/">class GtkSocket</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkShortcutsWindow/">class GtkShortcutsWindow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkShortcutsShortcut/">class GtkShortcutsShortcut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkShortcutsSection/">class GtkShortcutsSection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkShortcutsGroup/">class GtkShortcutsGroup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkShortcutLabel/">class GtkShortcutLabel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSettings/">class GtkSettings</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSeparatorToolItem/">class GtkSeparatorToolItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSeparatorMenuItem/">class GtkSeparatorMenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSearchEntry/">class GtkSearchEntry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkSearchBar/">class GtkSearchBar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkScrolledWindowAccessible/">class GtkScrolledWindowAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkScrolledWindow/">class GtkScrolledWindow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkScaleButtonAccessible/">class GtkScaleButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkScaleAccessible/">class GtkScaleAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRevealer/">class GtkRevealer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRendererCellAccessible/">class GtkRendererCellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRecentManager/">class GtkRecentManager</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRecentFilter/">class GtkRecentFilter</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRecentChooserWidget/">class GtkRecentChooserWidget</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRecentChooserMenu/">class GtkRecentChooserMenu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRecentAction/">class GtkRecentAction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRcStyle/">class GtkRcStyle</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRangeAccessible/">class GtkRangeAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRange/">class GtkRange</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRadioMenuItemAccessible/">class GtkRadioMenuItemAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRadioButtonAccessible/">class GtkRadioButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkRadioAction/">class GtkRadioAction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkProgressBarAccessible/">class GtkProgressBarAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkProgressBar/">class GtkProgressBar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPrintOperation/">class GtkPrintOperation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPrintContext/">class GtkPrintContext</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPopoverMenu/">class GtkPopoverMenu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPopoverAccessible/">class GtkPopoverAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPlugAccessible/">class GtkPlugAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPlacesSidebar/">class GtkPlacesSidebar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkPanedAccessible/">class GtkPanedAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkOverlay/">class GtkOverlay</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkOrientation/">type GtkOrientation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkOrientationHorizontal/">primitive GtkOrientationHorizontal</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkOrientationVertical/">primitive GtkOrientationVertical</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkOffscreenWindow/">class GtkOffscreenWindow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkNumerableIcon/">class GtkNumerableIcon</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkNotebookPageAccessible/">class GtkNotebookPageAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkNotebookAccessible/">class GtkNotebookAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkNotebook/">class GtkNotebook</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkNativeDialog/">class GtkNativeDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMountOperation/">class GtkMountOperation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkModelButton/">class GtkModelButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMisc/">class GtkMisc</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuToolButton/">class GtkMenuToolButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuShellAccessible/">class GtkMenuShellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuShell/">class GtkMenuShell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuItemAccessible/">class GtkMenuItemAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuItem/">class GtkMenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuButtonAccessible/">class GtkMenuButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuButton/">class GtkMenuButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkMenuAccessible/">class GtkMenuAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLockButtonAccessible/">class GtkLockButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkListBoxRowAccessible/">class GtkListBoxRowAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkListBoxRow/">class GtkListBoxRow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkListBoxAccessible/">class GtkListBoxAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkListBox/">class GtkListBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLinkButtonAccessible/">class GtkLinkButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLinkButton/">class GtkLinkButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLevelBarAccessible/">class GtkLevelBarAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLevelBar/">class GtkLevelBar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLayout/">class GtkLayout</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLabelAccessible/">class GtkLabelAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkLabel/">class GtkLabel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkImageMenuItem/">class GtkImageMenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkImageCellAccessible/">class GtkImageCellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkImageAccessible/">class GtkImageAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconViewAccessible/">class GtkIconViewAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconTheme/">class GtkIconTheme</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSize/">type GtkIconSize</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeInvalid/">primitive GtkIconSizeInvalid</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeMenu/">primitive GtkIconSizeMenu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeSmallToolbar/">primitive GtkIconSizeSmallToolbar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeLargeToolbar/">primitive GtkIconSizeLargeToolbar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeButton/">primitive GtkIconSizeButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeDnd/">primitive GtkIconSizeDnd</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconSizeDialog/">primitive GtkIconSizeDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIconFactory/">class GtkIconFactory</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIMMulticontext/">class GtkIMMulticontext</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIMContextSimple/">class GtkIMContextSimple</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkIMContext/">class GtkIMContext</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHeaderBarAccessible/">class GtkHeaderBarAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHeaderBar/">class GtkHeaderBar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHandleBox/">class GtkHandleBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHSeparator/">class GtkHSeparator</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHScrollbar/">class GtkHScrollbar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHScale/">class GtkHScale</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHSV/">class GtkHSV</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHPaned/">class GtkHPaned</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHButtonBox/">class GtkHButtonBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkHBox/">class GtkHBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGrid/">class GtkGrid</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureZoom/">class GtkGestureZoom</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureSwipe/">class GtkGestureSwipe</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureStylus/">class GtkGestureStylus</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureSingle/">class GtkGestureSingle</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureRotate/">class GtkGestureRotate</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureMultiPress/">class GtkGestureMultiPress</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureLongPress/">class GtkGestureLongPress</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGestureDrag/">class GtkGestureDrag</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGesture/">class GtkGesture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkGLArea/">class GtkGLArea</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFrameAccessible/">class GtkFrameAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFrame/">class GtkFrame</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFontSelectionDialog/">class GtkFontSelectionDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFontSelection/">class GtkFontSelection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFontChooserWidget/">class GtkFontChooserWidget</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFontChooserDialog/">class GtkFontChooserDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFontButton/">class GtkFontButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFlowBoxChildAccessible/">class GtkFlowBoxChildAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFlowBoxChild/">class GtkFlowBoxChild</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFlowBoxAccessible/">class GtkFlowBoxAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFlowBox/">class GtkFlowBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkFixed/">class GtkFixed</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkExpanderAccessible/">class GtkExpanderAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkExpander/">class GtkExpander</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEventControllerMotion/">class GtkEventControllerMotion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEventControllerKey/">class GtkEventControllerKey</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEventController/">class GtkEventController</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEventBox/">class GtkEventBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEntryCompletion/">class GtkEntryCompletion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEntryBuffer/">class GtkEntryBuffer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEntryAccessible/">class GtkEntryAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkEntry/">class GtkEntry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkDrawingArea/">class GtkDrawingArea</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCssProvider/">class GtkCssProvider</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkContainerCellAccessible/">class GtkContainerCellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkContainerAccessible/">class GtkContainerAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkContainer/">trait GtkContainer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkComboBoxText/">class GtkComboBoxText</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkComboBoxAccessible/">class GtkComboBoxAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkColorSelectionDialog/">class GtkColorSelectionDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkColorSelection/">class GtkColorSelection</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkColorChooserWidget/">class GtkColorChooserWidget</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkColorChooserDialog/">class GtkColorChooserDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkClipboard/">class GtkClipboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCheckMenuItemAccessible/">class GtkCheckMenuItemAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCheckMenuItem/">class GtkCheckMenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCheckButton/">class GtkCheckButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererToggle/">class GtkCellRendererToggle</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererText/">class GtkCellRendererText</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererSpinner/">class GtkCellRendererSpinner</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererSpin/">class GtkCellRendererSpin</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererProgress/">class GtkCellRendererProgress</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererPixbuf/">class GtkCellRendererPixbuf</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererCombo/">class GtkCellRendererCombo</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRendererAccel/">class GtkCellRendererAccel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellRenderer/">class GtkCellRenderer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellAreaContext/">class GtkCellAreaContext</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellAreaBox/">class GtkCellAreaBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellArea/">class GtkCellArea</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCellAccessible/">class GtkCellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkCalendar/">class GtkCalendar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkButtonAccessible/">class GtkButtonAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkBuilder/">class GtkBuilder</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkBox/">class GtkBox</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkBooleanCellAccessible/">class GtkBooleanCellAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkBin/">class GtkBin</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAssistant/">class GtkAssistant</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAspectFrame/">class GtkAspectFrame</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkArrowAccessible/">class GtkArrowAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkApplicationWindow/">class GtkApplicationWindow</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkApplication/">class GtkApplication</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAppChooserWidget/">class GtkAppChooserWidget</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAppChooserButton/">class GtkAppChooserButton</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAlignment/">class GtkAlignment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAdjustment/">class GtkAdjustment</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkActionGroup/">class GtkActionGroup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkActionBar/">class GtkActionBar</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAction/">class GtkAction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAccessible/">class GtkAccessible</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAccelMap/">class GtkAccelMap</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAccelLabel/">class GtkAccelLabel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAccelGroup/">class GtkAccelGroup</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-GtkAboutDialog/">class GtkAboutDialog</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../gtk3-Gtk/">primitive Gtk</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">package minimal-browser/../gobject</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-..-gobject--index/">Package</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-..-gobject-GObjectREF/">primitive GObjectREF</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-..-gobject-GObject/">primitive GObject</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">package minimal-browser/webkit2gtk</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-webkit2gtk--index/">Package</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-webkit2gtk-GMainContext/">primitive GMainContext</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../minimal-browser-webkit2gtk-WebKitWebView/">class WebKitWebView</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">source</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../minimal-browser/minimal-model/">minimal-model.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../minimal-browser/minimal-controller/">minimal-controller.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../minimal-browser/main/">main.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../unsigned/">unsigned.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stringable/">stringable.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../string/">string.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../stdin/">stdin.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../std_stream/">std_stream.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../source_loc/">source_loc.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../signed/">signed.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../seq/">seq.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../runtime_options/">runtime_options.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../real/">real.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../read_seq/">read_seq.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../pointer/">pointer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../platform/">platform.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../nullable_pointer/">nullable_pointer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../none/">none.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../iterator/">iterator.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../float/">float.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../env/">env.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../do_not_optimise/">do_not_optimise.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../disposable_actor/">disposable_actor.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../compare/">compare.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../bool/">bool.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../asio_event/">asio_event.pony</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">array.pony</a>
+    <ul class="subnav">
+            
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../any/">any.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ambient_auth/">ambient_auth.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../_to_string/">_to_string.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../_arithmetic/">_arithmetic.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../debug/debug/">debug.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/m/">m.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWindowType/">GtkWindowType.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWindowPosition/">GtkWindowPosition.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWindowGroup/">GtkWindowGroup.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWindowAccessible/">GtkWindowAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWindow/">GtkWindow.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWidgetAccessible/">GtkWidgetAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkWidget/">GtkWidget.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVolumeButton/">GtkVolumeButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkViewport/">GtkViewport.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVSeparator/">GtkVSeparator.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVScrollbar/">GtkVScrollbar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVScale/">GtkVScale.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVPaned/">GtkVPaned.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVButtonBox/">GtkVButtonBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkVBox/">GtkVBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkUIManager/">GtkUIManager.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTreeViewAccessible/">GtkTreeViewAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTreeSelection/">GtkTreeSelection.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTreeModelFilter/">GtkTreeModelFilter.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToplevelAccessible/">GtkToplevelAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTooltip/">GtkTooltip.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToolbar/">GtkToolbar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToolPalette/">GtkToolPalette.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToolItemGroup/">GtkToolItemGroup.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToolItem/">GtkToolItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToolButton/">GtkToolButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToggleToolButton/">GtkToggleToolButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToggleButtonAccessible/">GtkToggleButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToggleButton/">GtkToggleButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkToggleAction/">GtkToggleAction.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkThemingEngine/">GtkThemingEngine.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextViewAccessible/">GtkTextViewAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextView/">GtkTextView.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextTagTable/">GtkTextTagTable.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextTag/">GtkTextTag.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextMark/">GtkTextMark.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextChildAnchor/">GtkTextChildAnchor.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextCellAccessible/">GtkTextCellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTextBuffer/">GtkTextBuffer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTearoffMenuItem/">GtkTearoffMenuItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkTable/">GtkTable.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSwitchAccessible/">GtkSwitchAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSwitch/">GtkSwitch.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStyleProperties/">GtkStyleProperties.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStyleContext/">GtkStyleContext.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStyle/">GtkStyle.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStatusbarAccessible/">GtkStatusbarAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStatusbar/">GtkStatusbar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStackSwitcher/">GtkStackSwitcher.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStackSidebar/">GtkStackSidebar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStackAccessible/">GtkStackAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkStack/">GtkStack.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSpinnerAccessible/">GtkSpinnerAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSpinner/">GtkSpinner.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSpinButtonAccessible/">GtkSpinButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSpinButton/">GtkSpinButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSocketAccessible/">GtkSocketAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSocket/">GtkSocket.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkShortcutsWindow/">GtkShortcutsWindow.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkShortcutsShortcut/">GtkShortcutsShortcut.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkShortcutsSection/">GtkShortcutsSection.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkShortcutsGroup/">GtkShortcutsGroup.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkShortcutLabel/">GtkShortcutLabel.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSettings/">GtkSettings.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSeparatorToolItem/">GtkSeparatorToolItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSeparatorMenuItem/">GtkSeparatorMenuItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSearchEntry/">GtkSearchEntry.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkSearchBar/">GtkSearchBar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkScrolledWindowAccessible/">GtkScrolledWindowAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkScrolledWindow/">GtkScrolledWindow.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkScaleButtonAccessible/">GtkScaleButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkScaleAccessible/">GtkScaleAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRevealer/">GtkRevealer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRendererCellAccessible/">GtkRendererCellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRecentManager/">GtkRecentManager.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRecentFilter/">GtkRecentFilter.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRecentChooserWidget/">GtkRecentChooserWidget.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRecentChooserMenu/">GtkRecentChooserMenu.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRecentAction/">GtkRecentAction.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRcStyle/">GtkRcStyle.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRangeAccessible/">GtkRangeAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRange/">GtkRange.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRadioMenuItemAccessible/">GtkRadioMenuItemAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRadioButtonAccessible/">GtkRadioButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkRadioAction/">GtkRadioAction.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkProgressBarAccessible/">GtkProgressBarAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkProgressBar/">GtkProgressBar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPrintOperation/">GtkPrintOperation.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPrintContext/">GtkPrintContext.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPopoverMenu/">GtkPopoverMenu.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPopoverAccessible/">GtkPopoverAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPlugAccessible/">GtkPlugAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPlacesSidebar/">GtkPlacesSidebar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkPanedAccessible/">GtkPanedAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkOverlay/">GtkOverlay.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkOrientation/">GtkOrientation.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkOffscreenWindow/">GtkOffscreenWindow.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkNumerableIcon/">GtkNumerableIcon.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkNotebookPageAccessible/">GtkNotebookPageAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkNotebookAccessible/">GtkNotebookAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkNotebook/">GtkNotebook.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkNativeDialog/">GtkNativeDialog.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMountOperation/">GtkMountOperation.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkModelButton/">GtkModelButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMisc/">GtkMisc.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuToolButton/">GtkMenuToolButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuShellAccessible/">GtkMenuShellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuShell/">GtkMenuShell.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuItemAccessible/">GtkMenuItemAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuItem/">GtkMenuItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuButtonAccessible/">GtkMenuButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuButton/">GtkMenuButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkMenuAccessible/">GtkMenuAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLockButtonAccessible/">GtkLockButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkListBoxRowAccessible/">GtkListBoxRowAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkListBoxRow/">GtkListBoxRow.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkListBoxAccessible/">GtkListBoxAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkListBox/">GtkListBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLinkButtonAccessible/">GtkLinkButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLinkButton/">GtkLinkButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLevelBarAccessible/">GtkLevelBarAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLevelBar/">GtkLevelBar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLayout/">GtkLayout.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLabelAccessible/">GtkLabelAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkLabel/">GtkLabel.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkImageMenuItem/">GtkImageMenuItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkImageCellAccessible/">GtkImageCellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkImageAccessible/">GtkImageAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIconViewAccessible/">GtkIconViewAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIconTheme/">GtkIconTheme.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIconSize/">GtkIconSize.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIconFactory/">GtkIconFactory.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIMMulticontext/">GtkIMMulticontext.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIMContextSimple/">GtkIMContextSimple.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkIMContext/">GtkIMContext.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHeaderBarAccessible/">GtkHeaderBarAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHeaderBar/">GtkHeaderBar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHandleBox/">GtkHandleBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHSeparator/">GtkHSeparator.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHScrollbar/">GtkHScrollbar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHScale/">GtkHScale.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHSV/">GtkHSV.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHPaned/">GtkHPaned.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHButtonBox/">GtkHButtonBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkHBox/">GtkHBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGrid/">GtkGrid.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureZoom/">GtkGestureZoom.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureSwipe/">GtkGestureSwipe.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureStylus/">GtkGestureStylus.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureSingle/">GtkGestureSingle.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureRotate/">GtkGestureRotate.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureMultiPress/">GtkGestureMultiPress.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureLongPress/">GtkGestureLongPress.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGestureDrag/">GtkGestureDrag.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGesture/">GtkGesture.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkGLArea/">GtkGLArea.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFrameAccessible/">GtkFrameAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFrame/">GtkFrame.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFontSelectionDialog/">GtkFontSelectionDialog.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFontSelection/">GtkFontSelection.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFontChooserWidget/">GtkFontChooserWidget.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFontChooserDialog/">GtkFontChooserDialog.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFontButton/">GtkFontButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFlowBoxChildAccessible/">GtkFlowBoxChildAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFlowBoxChild/">GtkFlowBoxChild.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFlowBoxAccessible/">GtkFlowBoxAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFlowBox/">GtkFlowBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkFixed/">GtkFixed.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkExpanderAccessible/">GtkExpanderAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkExpander/">GtkExpander.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEventControllerMotion/">GtkEventControllerMotion.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEventControllerKey/">GtkEventControllerKey.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEventController/">GtkEventController.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEventBox/">GtkEventBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEntryCompletion/">GtkEntryCompletion.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEntryBuffer/">GtkEntryBuffer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEntryAccessible/">GtkEntryAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkEntry/">GtkEntry.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkDrawingArea/">GtkDrawingArea.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCssProvider/">GtkCssProvider.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkContainerCellAccessible/">GtkContainerCellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkContainerAccessible/">GtkContainerAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkContainer/">GtkContainer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkComboBoxText/">GtkComboBoxText.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkComboBoxAccessible/">GtkComboBoxAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkColorSelectionDialog/">GtkColorSelectionDialog.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkColorSelection/">GtkColorSelection.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkColorChooserWidget/">GtkColorChooserWidget.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkColorChooserDialog/">GtkColorChooserDialog.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkClipboard/">GtkClipboard.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCheckMenuItemAccessible/">GtkCheckMenuItemAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCheckMenuItem/">GtkCheckMenuItem.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCheckButton/">GtkCheckButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererToggle/">GtkCellRendererToggle.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererText/">GtkCellRendererText.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererSpinner/">GtkCellRendererSpinner.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererSpin/">GtkCellRendererSpin.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererProgress/">GtkCellRendererProgress.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererPixbuf/">GtkCellRendererPixbuf.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererCombo/">GtkCellRendererCombo.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRendererAccel/">GtkCellRendererAccel.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellRenderer/">GtkCellRenderer.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellAreaContext/">GtkCellAreaContext.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellAreaBox/">GtkCellAreaBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellArea/">GtkCellArea.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCellAccessible/">GtkCellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkCalendar/">GtkCalendar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkButtonAccessible/">GtkButtonAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkBuilder/">GtkBuilder.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkBox/">GtkBox.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkBooleanCellAccessible/">GtkBooleanCellAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkBin/">GtkBin.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAssistant/">GtkAssistant.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAspectFrame/">GtkAspectFrame.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkArrowAccessible/">GtkArrowAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkApplicationWindow/">GtkApplicationWindow.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkApplication/">GtkApplication.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAppChooserWidget/">GtkAppChooserWidget.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAppChooserButton/">GtkAppChooserButton.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAlignment/">GtkAlignment.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAdjustment/">GtkAdjustment.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkActionGroup/">GtkActionGroup.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkActionBar/">GtkActionBar.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAction/">GtkAction.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAccessible/">GtkAccessible.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAccelMap/">GtkAccelMap.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAccelLabel/">GtkAccelLabel.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAccelGroup/">GtkAccelGroup.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/GtkAboutDialog/">GtkAboutDialog.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../gtk3/Gtk/">Gtk.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../minimal-browser-__-gobject/GObject/">GObject.pony</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../minimal-browser-webkit2gtk/WebKitWebView/">WebKitWebView.pony</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">minimal-browser</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>source &raquo;</li>
+        
+      
+    
+    <li>array.pony</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <pre><code class="language-pony-full-source">class Array[A] is Seq[A]
+  &quot;&quot;&quot;
+  Contiguous, resizable memory to store elements of type A.
+
+  ## Usage
+
+  Creating an Array of String:
+  ```pony
+    let array: Array[String] = [&quot;dog&quot;; &quot;cat&quot;; &quot;wombat&quot;]
+    // array.size() == 3
+    // array.space() &gt;= 3
+  ```
+
+  Creating an empty Array of String, which may hold at least 10 elements before
+  requesting more space:
+  ```pony
+    let array = Array[String](10)
+    // array.size() == 0
+    // array.space() &gt;= 10
+  ```
+
+  Accessing elements can be done via the `apply(i: USize): this-&gt;A ?` method.
+  The provided index might be out of bounds so `apply` is partial and has to be
+  called within a try-catch block or inside another partial method:
+  ```pony
+    let array: Array[String] = [&quot;dog&quot;; &quot;cat&quot;; &quot;wombat&quot;]
+    let is_second_element_wobat = try
+      // indexes start from 0, so 1 is the second element
+      array(1)? == &quot;wombat&quot;
+    else
+      false
+    end
+  ```
+
+  Adding and removing elements to and from the end of the Array can be done via
+  `push` and `pop` methods. You could treat the array as a LIFO stack using
+  those methods:
+  ```pony
+    while (array.size() &gt; 0) do
+      let elem = array.pop()?
+      // do something with element
+    end
+  ```
+
+  Modifying the Array can be done via `update`, `insert` and `delete` methods
+  which alter the Array at an arbitrary index, moving elements left (when
+  deleting) or right (when inserting) as necessary.
+
+  Iterating over the elements of an Array can be done using the `values` method:
+  ```pony
+    for element in array.values() do
+        // do something with element
+    end
+  ```
+
+  ## Memory allocation
+  Array allocates contiguous memory. It always allocates at least enough memory
+  space to hold all of its elements. Space is the number of elements the Array
+  can hold without allocating more memory. The `space()` method returns the
+  number of elements an Array can hold. The `size()` method returns the number
+  of elements the Array holds.
+
+  Different data types require different amounts of memory. Array[U64] with size
+  of 6 will take more memory than an Array[U8] of the same size.
+
+  When creating an Array or adding more elements will calculate the next power
+  of 2 of the requested number of elements and allocate that much space, with a
+  lower bound of space for 8 elements.
+
+  Here's a few examples of the space allocated when initialising an Array with
+  various number of elements:
+
+  | size | space |
+  |------|-------|
+  | 0    | 0     |
+  | 1    | 8     |
+  | 8    | 8     |
+  | 9    | 16    |
+  | 16   | 16    |
+  | 17   | 32    |
+
+  Call the `compact()` method to ask the GC to reclaim unused space. There are
+  no guarantees that the GC will actually reclaim any space.
+  &quot;&quot;&quot;
+  var _size: USize
+  var _alloc: USize
+  var _ptr: Pointer[A]
+
+  new create(len: USize = 0) =&gt;
+    &quot;&quot;&quot;
+    Create an array with zero elements, but space for len elements.
+    &quot;&quot;&quot;
+    _size = 0
+
+    if len &gt; 0 then
+      _alloc = len.next_pow2().max(len).max(8)
+      _ptr = Pointer[A]._alloc(_alloc)
+    else
+      _alloc = 0
+      _ptr = Pointer[A]
+    end
+
+  new init(from: A^, len: USize) =&gt;
+    &quot;&quot;&quot;
+    Create an array of len elements, all initialised to the given value.
+    &quot;&quot;&quot;
+    _size = len
+
+    if len &gt; 0 then
+      _alloc = len.next_pow2().max(len).max(8)
+      _ptr = Pointer[A]._alloc(_alloc)
+
+      var i: USize = 0
+
+      while i &lt; len do
+        _ptr._update(i, from)
+        i = i + 1
+      end
+    else
+      _alloc = 0
+      _ptr = Pointer[A]
+    end
+
+  new from_cpointer(ptr: Pointer[A], len: USize, alloc: USize = 0) =&gt;
+    &quot;&quot;&quot;
+    Create an array from a C-style pointer and length. The contents are not
+    copied.
+    &quot;&quot;&quot;
+    _size = len
+
+    if alloc &gt; len then
+      _alloc = alloc
+    else
+      _alloc = len
+    end
+
+    _ptr = ptr
+
+  fun _copy_to(
+    ptr: Pointer[this-&gt;A!],
+    copy_len: USize,
+    from_offset: USize = 0,
+    to_offset: USize = 0)
+  =&gt;
+    &quot;&quot;&quot;
+    Copy copy_len elements from this to that at specified offsets.
+    &quot;&quot;&quot;
+    _ptr._offset(from_offset)._copy_to(ptr._offset(to_offset), copy_len)
+
+  fun cpointer(offset: USize = 0): Pointer[A] tag =&gt;
+    &quot;&quot;&quot;
+    Return the underlying C-style pointer.
+    &quot;&quot;&quot;
+    _ptr._offset(offset)
+
+  fun size(): USize =&gt;
+    &quot;&quot;&quot;
+    The number of elements in the array.
+    &quot;&quot;&quot;
+    _size
+
+  fun space(): USize =&gt;
+    &quot;&quot;&quot;
+    The available space in the array.
+    &quot;&quot;&quot;
+    _alloc
+
+  fun ref reserve(len: USize) =&gt;
+    &quot;&quot;&quot;
+    Reserve space for len elements, including whatever elements are already in
+    the array. Array space grows geometrically.
+    &quot;&quot;&quot;
+    if _alloc &lt; len then
+      _alloc = len.next_pow2().max(len).max(8)
+      _ptr = _ptr._realloc(_alloc)
+    end
+
+  fun box _element_size(): USize =&gt;
+    &quot;&quot;&quot;
+    Element size in bytes for an element.
+    &quot;&quot;&quot;
+    _ptr._element_size()
+
+  fun ref compact() =&gt;
+    &quot;&quot;&quot;
+    Try to remove unused space, making it available for garbage collection. The
+    request may be ignored.
+    &quot;&quot;&quot;
+    if _size &lt;= (512 / _ptr._element_size()) then
+      if _size.next_pow2() != _alloc.next_pow2() then
+        _alloc = _size.next_pow2()
+        let old_ptr = _ptr = Pointer[A]._alloc(_alloc)
+        old_ptr._copy_to(_ptr._convert[A!](), _size)
+      end
+    elseif _size &lt; _alloc then
+      _alloc = _size
+      let old_ptr = _ptr = Pointer[A]._alloc(_alloc)
+      old_ptr._copy_to(_ptr._convert[A!](), _size)
+    end
+
+  fun ref undefined[B: (A &amp; Real[B] val &amp; Number) = A](len: USize) =&gt;
+    &quot;&quot;&quot;
+    Resize to len elements, populating previously empty elements with random
+    memory. This is only allowed for an array of numbers.
+    &quot;&quot;&quot;
+    reserve(len)
+    _size = len
+
+  fun box read_u8[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U8 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U8 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    if offset &lt; _size then
+      _ptr._offset(offset)._convert[U8]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u16[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U16 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U16 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u16_bytes = U16(0).bytewidth()
+    if (offset + u16_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U16]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u32[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U32 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U32 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u32_bytes = U32(0).bytewidth()
+    if (offset + u32_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U32]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u64[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U64 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U64 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u64_bytes = U64(0).bytewidth()
+    if (offset + u64_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U64]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u128[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U128 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U128 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u128_bytes = U128(0).bytewidth()
+    if (offset + u128_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U128]()._apply(0)
+    else
+      error
+    end
+
+  fun apply(i: USize): this-&gt;A ? =&gt;
+    &quot;&quot;&quot;
+    Get the i-th element, raising an error if the index is out of bounds.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      _ptr._apply(i)
+    else
+      error
+    end
+
+  fun ref update_u8[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U8): U8 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U8 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    if offset &lt; _size then
+      _ptr._offset(offset)._convert[U8]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u16[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U16): U16 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U16 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u16_bytes = U16(0).bytewidth()
+    if (offset + u16_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U16]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u32[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U32): U32 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U32 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u32_bytes = U32(0).bytewidth()
+    if (offset + u32_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U32]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u64[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U64): U64 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U64 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u64_bytes = U64(0).bytewidth()
+    if (offset + u64_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U64]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u128[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U128): U128 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U128 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u128_bytes = U128(0).bytewidth()
+    if (offset + u128_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U128]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update(i: USize, value: A): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Change the i-th element, raising an error if the index is out of bounds.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      _ptr._update(i, consume value)
+    else
+      error
+    end
+
+  fun ref insert(i: USize, value: A) ? =&gt;
+    &quot;&quot;&quot;
+    Insert an element into the array. Elements after this are moved up by one
+    index, extending the array.
+
+    When inserting right beyond the last element, at index `this.size()`,
+    the element will be appended, similar to `push()`,
+    an insert at index `0` prepends the value to the array.
+    An insert into an index beyond `this.size()` raises an error.
+
+    ```pony
+    let array = Array[U8](4)              // []
+    array.insert(0, 0xDE)?                // prepend: [0xDE]
+    array.insert(array.size(), 0xBE)?     // append:  [0xDE; 0xBE]
+    array.insert(1, 0xAD)?                // insert:  [0xDE; 0xAD; 0xBE]
+    array.insert(array.size() + 1, 0xEF)? // error
+    ```
+    &quot;&quot;&quot;
+    if i &lt;= _size then
+      reserve(_size + 1)
+      _ptr._offset(i)._insert(1, _size - i)
+      _ptr._update(i, consume value)
+      _size = _size + 1
+    else
+      error
+    end
+
+  fun ref delete(i: USize): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Delete an element from the array. Elements after this are moved down by one
+    index, compacting the array.
+    An out of bounds index raises an error.
+    The deleted element is returned.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      _size = _size - 1
+      _ptr._offset(i)._delete(1, _size - i)
+    else
+      error
+    end
+
+  fun ref truncate(len: USize) =&gt;
+    &quot;&quot;&quot;
+    Truncate an array to the given length, discarding excess elements. If the
+    array is already smaller than len, do nothing.
+    &quot;&quot;&quot;
+    _size = _size.min(len)
+
+  fun ref trim_in_place(from: USize = 0, to: USize = -1) =&gt;
+    &quot;&quot;&quot;
+    Trim the array to a portion of itself, covering `from` until `to`.
+    Unlike slice, the operation does not allocate a new array nor copy elements.
+    &quot;&quot;&quot;
+    let last = _size.min(to)
+    let offset = last.min(from)
+    let size' = last - offset
+
+    // use the new size' for alloc if we're not including the last used byte
+    // from the original data and only include the extra allocated bytes if
+    // we're including the last byte.
+    _alloc = if last == _size then _alloc - offset else size' end
+
+    _size = size'
+
+    // if _alloc == 0 then we've trimmed all the memory originally allocated.
+    // if we do _ptr._offset, we will spill into memory not allocated/owned
+    // by this array and could potentially cause a segfault if we cross
+    // a pagemap boundary into a pagemap address that hasn't been allocated
+    // yet when `reserve` is called next.
+    if _alloc == 0 then
+      _ptr = Pointer[A]
+    else
+      _ptr = _ptr._offset(offset)
+    end
+
+  fun val trim(from: USize = 0, to: USize = -1): Array[A] val =&gt;
+    &quot;&quot;&quot;
+    Return a shared portion of this array, covering `from` until `to`.
+    Both the original and the new array are immutable, as they share memory.
+    The operation does not allocate a new array pointer nor copy elements.
+    &quot;&quot;&quot;
+    let last = _size.min(to)
+    let offset = last.min(from)
+
+    recover
+      let size' = last - offset
+
+      // use the new size' for alloc if we're not including the last used byte
+      // from the original data and only include the extra allocated bytes if
+      // we're including the last byte.
+      let alloc = if last == _size then _alloc - offset else size' end
+
+      if size' &gt; 0 then
+        from_cpointer(_ptr._offset(offset)._unsafe(), size', alloc)
+      else
+        create()
+      end
+    end
+
+  fun iso chop[B: (A &amp; Any #send) = A](split_point: USize): (Array[A] iso^, Array[A] iso^) =&gt;
+    &quot;&quot;&quot;
+    Chops the array in half at the split point requested and returns both
+    the left and right portions. The original array is trimmed in place and
+    returned as the left portion. If the split point is larger than the
+    array, the left portion is the original array and the right portion
+    is a new empty array.
+    The operation does not allocate a new array pointer nor copy elements.
+
+    The entry type must be sendable so that the two halves can be isolated.
+    Otherwise, two entries may have shared references to mutable data,
+    or even to each other, such as in the code below:
+
+    ```pony
+      class Example
+         var other: (Example | None) = None
+
+      let arr: Array[Example] iso = recover
+         let obj1 = Example
+         let obj2 = Example
+         obj1.other = obj2
+         obj2.other = obj1
+         [obj1; obj2]
+      end
+    ```
+    &quot;&quot;&quot;
+    let start_ptr = cpointer(split_point)
+    let size' = _size - _size.min(split_point)
+    let alloc = _alloc - _size.min(split_point)
+
+    trim_in_place(0, split_point)
+
+    let right = recover
+      if size' &gt; 0 then
+        from_cpointer(start_ptr._unsafe(), size', alloc)
+      else
+        create()
+      end
+    end
+
+    (consume this, consume right)
+
+
+  fun iso unchop(b: Array[A] iso):
+    ((Array[A] iso^, Array[A] iso^) | Array[A] iso^)
+  =&gt;
+    &quot;&quot;&quot;
+    Unchops two iso arrays to return the original array they were chopped from.
+    Both input arrays are isolated and mutable and were originally chopped from
+    a single array. This function checks that they are indeed two arrays chopped
+    from the same original array and can be unchopped before doing the
+    unchopping and returning the unchopped array. If the two arrays cannot be
+    unchopped it returns both arrays without modifying them.
+    The operation does not allocate a new array pointer nor copy elements.
+    &quot;&quot;&quot;
+    if _size == 0 then
+      return consume b
+    end
+
+    if b.size() == 0 then
+      return consume this
+    end
+
+    (let unchoppable, let a_left) =
+      if (_size == _alloc) and (cpointer(_size) == b.cpointer()) then
+        (true, true)
+      elseif (b.size() == b.space()) and (b.cpointer(b.size()) == cpointer())
+        then
+        (true, false)
+      else
+        (false, false)
+      end
+
+    if not unchoppable then
+      return (consume this, consume b)
+    end
+
+    if a_left then
+      _alloc = _alloc + b._alloc
+      _size = _size + b._size
+      consume this
+    else
+      b._alloc = b._alloc + _alloc
+      b._size = b._size + _size
+      consume b
+    end
+
+  fun ref copy_from[B: (A &amp; Real[B] val &amp; U8) = A](
+    src: Array[U8] box,
+    src_idx: USize,
+    dst_idx: USize,
+    len: USize)
+  =&gt;
+    &quot;&quot;&quot;
+    Copy len elements from src(src_idx) to this(dst_idx).
+    Only works for Array[U8].
+    &quot;&quot;&quot;
+    reserve(dst_idx + len)
+    src._ptr._offset(src_idx)._copy_to(_ptr._convert[U8]()._offset(dst_idx), len)
+
+    if _size &lt; (dst_idx + len) then
+      _size = dst_idx + len
+    end
+
+  fun copy_to(
+    dst: Array[this-&gt;A!],
+    src_idx: USize,
+    dst_idx: USize,
+    len: USize)
+  =&gt;
+    &quot;&quot;&quot;
+    Copy len elements from this(src_idx) to dst(dst_idx).
+    &quot;&quot;&quot;
+    dst.reserve(dst_idx + len)
+    _ptr._offset(src_idx)._copy_to(dst._ptr._offset(dst_idx), len)
+
+    if dst._size &lt; (dst_idx + len) then
+      dst._size = dst_idx + len
+    end
+
+  fun ref remove(i: USize, n: USize) =&gt;
+    &quot;&quot;&quot;
+    Remove n elements from the array, beginning at index i.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      let count = n.min(_size - i)
+      _size = _size - count
+      _ptr._offset(i)._delete(count, _size - i)
+    end
+
+  fun ref clear() =&gt;
+    &quot;&quot;&quot;
+    Remove all elements from the array.
+    &quot;&quot;&quot;
+    _size = 0
+
+  fun ref push_u8[B: (A &amp; Real[B] val &amp; U8) = A](value: U8) =&gt;
+    &quot;&quot;&quot;
+    Add a U8 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u8_bytes = U8(0).bytewidth()
+    reserve(_size + u8_bytes)
+    _ptr._offset(_size)._convert[U8]()._update(0, value)
+    _size = _size + u8_bytes
+
+  fun ref push_u16[B: (A &amp; Real[B] val &amp; U8) = A](value: U16) =&gt;
+    &quot;&quot;&quot;
+    Add a U16 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u16_bytes = U16(0).bytewidth()
+    reserve(_size + u16_bytes)
+    _ptr._offset(_size)._convert[U16]()._update(0, value)
+    _size = _size + u16_bytes
+
+  fun ref push_u32[B: (A &amp; Real[B] val &amp; U8) = A](value: U32) =&gt;
+    &quot;&quot;&quot;
+    Add a U32 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u32_bytes = U32(0).bytewidth()
+    reserve(_size + u32_bytes)
+    _ptr._offset(_size)._convert[U32]()._update(0, value)
+    _size = _size + u32_bytes
+
+  fun ref push_u64[B: (A &amp; Real[B] val &amp; U8) = A](value: U64) =&gt;
+    &quot;&quot;&quot;
+    Add a U64 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u64_bytes = U64(0).bytewidth()
+    reserve(_size + u64_bytes)
+    _ptr._offset(_size)._convert[U64]()._update(0, value)
+    _size = _size + u64_bytes
+
+  fun ref push_u128[B: (A &amp; Real[B] val &amp; U8) = A](value: U128) =&gt;
+    &quot;&quot;&quot;
+    Add a U128 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u128_bytes = U128(0).bytewidth()
+    reserve(_size + u128_bytes)
+    _ptr._offset(_size)._convert[U128]()._update(0, value)
+    _size = _size + u128_bytes
+
+  fun ref push(value: A) =&gt;
+    &quot;&quot;&quot;
+    Add an element to the end of the array.
+    &quot;&quot;&quot;
+    reserve(_size + 1)
+    _ptr._update(_size, consume value)
+    _size = _size + 1
+
+  fun ref pop(): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Remove an element from the end of the array.
+    The removed element is returned.
+    &quot;&quot;&quot;
+    delete(_size - 1)?
+
+  fun ref unshift(value: A) =&gt;
+    &quot;&quot;&quot;
+    Add an element to the beginning of the array.
+    &quot;&quot;&quot;
+    try
+      insert(0, consume value)?
+    end
+
+  fun ref shift(): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Remove an element from the beginning of the array.
+    The removed element is returned.
+    &quot;&quot;&quot;
+    delete(0)?
+
+  fun ref append(
+    seq: (ReadSeq[A] &amp; ReadElement[A^]),
+    offset: USize = 0,
+    len: USize = -1)
+  =&gt;
+    &quot;&quot;&quot;
+    Append the elements from a sequence, starting from the given offset.
+    &quot;&quot;&quot;
+    if offset &gt;= seq.size() then
+      return
+    end
+
+    let copy_len = len.min(seq.size() - offset)
+    reserve(_size + copy_len)
+
+    var n = USize(0)
+
+    try
+      while n &lt; copy_len do
+        _ptr._update(_size + n, seq(offset + n)?)
+
+        n = n + 1
+      end
+    end
+
+    _size = _size + n
+
+  fun ref concat(iter: Iterator[A^], offset: USize = 0, len: USize = -1) =&gt;
+    &quot;&quot;&quot;
+    Add len iterated elements to the end of the array, starting from the given
+    offset.
+    &quot;&quot;&quot;
+
+    var n = USize(0)
+
+    try
+      while n &lt; offset do
+        if iter.has_next() then
+          iter.next()?
+        else
+          return
+        end
+
+        n = n + 1
+      end
+    end
+
+    n = 0
+
+    // If a concrete len is specified, we take the caller at their word
+    // and reserve that much space, even though we can't verify that the
+    // iterator actually has that many elements available. Reserving ahead
+    // of time lets us take a fast path of direct pointer access.
+    if len != -1 then
+      reserve(_size + len)
+
+      try
+        while n &lt; len do
+          if iter.has_next() then
+            _ptr._update(_size + n, iter.next()?)
+          else
+            break
+          end
+
+          n = n + 1
+        end
+      end
+
+      _size = _size + n
+    else
+      try
+        while n &lt; len do
+          if iter.has_next() then
+            push(iter.next()?)
+          else
+            break
+          end
+
+          n = n + 1
+        end
+      end
+    end
+
+  fun find(
+    value: A!,
+    offset: USize = 0,
+    nth: USize = 0,
+    predicate: {(box-&gt;A!, box-&gt;A!): Bool} val = {(l, r) =&gt; l is r })
+    : USize ?
+  =&gt;
+    &quot;&quot;&quot;
+    Find the `nth` appearance of `value` from the beginning of the array,
+    starting at `offset` and examining higher indices, and using the supplied
+    `predicate` for comparisons. Returns the index of the value, or raise an
+    error if the value isn't present.
+
+    By default, the search starts at the first element of the array, returns
+    the first instance of `value` found, and uses object identity for
+    comparison.
+    &quot;&quot;&quot;
+    var i = offset
+    var n = USize(0)
+
+    while i &lt; _size do
+      if predicate(_ptr._apply(i), value) then
+        if n == nth then
+          return i
+        end
+
+        n = n + 1
+      end
+
+      i = i + 1
+    end
+
+    error
+
+  fun contains(
+    value: A!,
+    predicate: {(box-&gt;A!, box-&gt;A!): Bool} val =
+      {(l: box-&gt;A!, r: box-&gt;A!): Bool =&gt; l is r })
+    : Bool
+  =&gt;
+    &quot;&quot;&quot;
+    Returns true if the array contains `value`, false otherwise.
+
+    The default predicate checks for matches by identity. To search for matches
+    by structural equality, pass an object literal such as `{(l, r) =&gt; l == r}`.
+    &quot;&quot;&quot;
+    var i = USize(0)
+
+    while i &lt; _size do
+      if predicate(_ptr._apply(i), value) then
+        return true
+      end
+
+      i = i + 1
+    end
+    false
+
+  fun rfind(
+    value: A!,
+    offset: USize = -1,
+    nth: USize = 0,
+    predicate: {(box-&gt;A!, box-&gt;A!): Bool} val =
+      {(l: box-&gt;A!, r: box-&gt;A!): Bool =&gt; l is r })
+    : USize ?
+  =&gt;
+    &quot;&quot;&quot;
+    Find the `nth` appearance of `value` from the end of the array, starting at
+    `offset` and examining lower indices, and using the supplied `predicate` for
+    comparisons. Returns the index of the value, or raise an error if the value
+    isn't present.
+
+    By default, the search starts at the last element of the array, returns the
+    first instance of `value` found, and uses object identity for comparison.
+    &quot;&quot;&quot;
+    if _size &gt; 0 then
+      var i = if offset &gt;= _size then _size - 1 else offset end
+      var n = USize(0)
+
+      repeat
+        if predicate(_ptr._apply(i), value) then
+          if n == nth then
+            return i
+          end
+
+          n = n + 1
+        end
+      until (i = i - 1) == 0
+      end
+    end
+
+    error
+
+  fun clone(): Array[this-&gt;A!]^ =&gt;
+    &quot;&quot;&quot;
+    Clone the array.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not cloned.
+    &quot;&quot;&quot;
+    let out = Array[this-&gt;A!](_size)
+    _ptr._copy_to(out._ptr, _size)
+    out._size = _size
+    out
+
+  fun slice(
+    from: USize = 0,
+    to: USize = -1,
+    step: USize = 1)
+    : Array[this-&gt;A!]^
+  =&gt;
+    &quot;&quot;&quot;
+    Create a new array that is a clone of a portion of this array. The range is
+    exclusive and saturated.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not cloned.
+    &quot;&quot;&quot;
+    let out = Array[this-&gt;A!]
+    let last = _size.min(to)
+    let len = last - from
+
+    if (last &gt; from) and (step &gt; 0) then
+      out.reserve((len + (step - 1)) / step)
+
+      if step == 1 then
+        copy_to(out, from, 0, len)
+      else
+        try
+          var i = from
+
+          while i &lt; last do
+            out.push(this(i)?)
+            i = i + step
+          end
+        end
+      end
+    end
+
+    out
+
+  fun permute(indices: Iterator[USize]): Array[this-&gt;A!]^ ? =&gt;
+    &quot;&quot;&quot;
+    Create a new array with the elements permuted.
+    Permute to an arbitrary order that may include duplicates. An out of bounds
+    index raises an error.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not copied.
+    &quot;&quot;&quot;
+    let out = Array[this-&gt;A!]
+    for i in indices do
+      out.push(this(i)?)
+    end
+    out
+
+  fun reverse(): Array[this-&gt;A!]^ =&gt;
+    &quot;&quot;&quot;
+    Create a new array with the elements in reverse order.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not copied.
+    &quot;&quot;&quot;
+    clone() .&gt; reverse_in_place()
+
+  fun ref reverse_in_place() =&gt;
+    &quot;&quot;&quot;
+    Reverse the array in place.
+    &quot;&quot;&quot;
+    if _size &gt; 1 then
+      var i: USize = 0
+      var j = _size - 1
+
+      while i &lt; j do
+        let x = _ptr._apply(i)
+        _ptr._update(i, _ptr._apply(j))
+        _ptr._update(j, x)
+        i = i + 1
+        j = j - 1
+      end
+    end
+
+  fun ref swap_elements(i: USize, j: USize) ? =&gt;
+    &quot;&quot;&quot;
+    Swap the element at index i with the element at index j.
+    If either i or j are out of bounds, an error is raised.
+    &quot;&quot;&quot;
+    if (i &gt;= _size) or (j &gt;= _size) then error end
+
+    let x = _ptr._apply(i)
+    _ptr._update(i, _ptr._apply(j))
+    _ptr._update(j, consume x)
+
+  fun keys(): ArrayKeys[A, this-&gt;Array[A]]^ =&gt;
+    &quot;&quot;&quot;
+    Return an iterator over the indices in the array.
+    &quot;&quot;&quot;
+    ArrayKeys[A, this-&gt;Array[A]](this)
+
+  fun values(): ArrayValues[A, this-&gt;Array[A]]^ =&gt;
+    &quot;&quot;&quot;
+    Return an iterator over the values in the array.
+    &quot;&quot;&quot;
+    ArrayValues[A, this-&gt;Array[A]](this)
+
+  fun pairs(): ArrayPairs[A, this-&gt;Array[A]]^ =&gt;
+    &quot;&quot;&quot;
+    Return an iterator over the (index, value) pairs in the array.
+    &quot;&quot;&quot;
+    ArrayPairs[A, this-&gt;Array[A]](this)
+
+class ArrayKeys[A, B: Array[A] #read] is Iterator[USize]
+  let _array: B
+  var _i: USize
+
+  new create(array: B) =&gt;
+    _array = array
+    _i = 0
+
+  fun has_next(): Bool =&gt;
+    _i &lt; _array.size()
+
+  fun ref next(): USize =&gt;
+    if _i &lt; _array.size() then
+      _i = _i + 1
+    else
+      _i
+    end
+
+class ArrayValues[A, B: Array[A] #read] is Iterator[B-&gt;A]
+  let _array: B
+  var _i: USize
+
+  new create(array: B) =&gt;
+    _array = array
+    _i = 0
+
+  fun has_next(): Bool =&gt;
+    _i &lt; _array.size()
+
+  fun ref next(): B-&gt;A ? =&gt;
+    _array(_i = _i + 1)?
+
+  fun ref rewind(): ArrayValues[A, B] =&gt;
+    _i = 0
+    this
+
+class ArrayPairs[A, B: Array[A] #read] is Iterator[(USize, B-&gt;A)]
+  let _array: B
+  var _i: USize
+
+  new create(array: B) =&gt;
+    _array = array
+    _i = 0
+
+  fun has_next(): Bool =&gt;
+    _i &lt; _array.size()
+
+  fun ref next(): (USize, B-&gt;A) ? =&gt;
+    (_i, _array(_i = _i + 1)?)
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../any/" class="btn btn-neutral float-right" title="any.pony">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../asio_event/" class="btn btn-neutral" title="asio_event.pony"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../asio_event/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../any/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,103 +1,104 @@
+"""
+# Minimal Browser
+
+This purpose of this project is to provide a simple application example
+so you can start using pony-gtk3 straight away.
+
+It's a simple WebKit2 Web Browser.
+"""
+
 use "gtk3"
 use "gobject"
 use "webkit2gtk"
 use "debug"
+use "lib:glib-2.0"
 
 use "lib:webkit2gtk-4.0"
 
 actor Main
+  fun @runtime_override_defaults(rto: RuntimeOptions) =>
+    """
+    When we execute Gtk it locks up one of Pony's schedulers.  It is vital
+    therefore that we override the pony default for ponyminthreads from its
+    default value of 1, to a minimum of two
+    """
+    rto.ponyminthreads = U32(2)
+
   new create(env: Env) =>
+    """
+    Gtk is an Event Driven framework, which means that we configure how the
+    application should operate and then hand-over control of it to Gtk.
+
+    However, Pony is *also* Event Driven (it being an Actor-Model based
+    language), but since Pony is going to continue to operate using the
+    other schedulers - that shouldn't be a problem, right?
+
+    Wrong.
+
+    The issue is that Gtk is not thread-safe, which means that if you attempt
+    to send a message to Gtk from a thread other than the one that it owns
+    it has a better than even chance of a SEGV.
+
+    Thankfully, Gtk does have a way of safely injecting callbacks into the
+    main Gtk thread - and that is how we mitigate this issue.
+    
+    Now they play nice!
+
+    In order to manage events that come not only from Gtk but potentially
+    other parts of your Pony application we have separated out our concerns
+    into a Model, a View, and a Controller.
+
+    Our Main actor execututes as follows:
+
+    1, We initialize the Gtk environment.
+    ```
+    Gtk.init()
+    ```
+
+    2, We create our default Model.
+    ```
+    var appmodel: AppModel = AppModel
+    ```
+    The Model in this context is just a class which contains references to
+    all of the items that our application will need to reference.  In this
+    example it contains references to the various Widgets that are needed
+    to provide the functionality we need.
+
+    3, We create a controller Actor
+    ```
+    var appcontroller: AppController = AppController(appmodel)
+    ```
+    As alluded to previously, this separation of control into a second Pony
+    Actor is only needed if we're taking additional events from pony as
+    a part of our application.
+
+    4, Lastly, we hand control of this schedular forever to Gtk.
+    ```
+    Gtk.main()
+    ```
+    """
+
+
     Gtk.init()
 
-    // Start by building our XML definition into a Gtk Datastructure!
-    var builder:  GtkBuilder = GtkBuilder.new_from_file("minimal-browser.glade")
+    var appmodel:      AppModel = AppModel
+    var appcontroller: AppController = AppController(appmodel)
 
-    // Extract the Main Window, Address Bar, and Box (for inserting our browser widget)
-    var mainwin:  GtkWindow = GtkWindow.create_from_GtkBuilder(builder, "GtkWindow")
-    var urientry: GtkEntry  = GtkEntry.create_from_GtkBuilder(builder, "uri_entrybox")
-    var hbox:     GtkBox    = GtkBox.create_from_GtkBuilder(builder, "hbox")
-
-    // Create and pack the browser widget at the end
-    var webkit: WebKitWebView = WebKitWebView
-    hbox.pack_end(webkit, true, true, U32(0))
-
-    // Set default Main Window Size
-    @gtk_window_set_default_size[None](mainwin.gtkwidget(), U32(800), U32(600))
-
-
-
-
-
-    var browserwiring: BrowserWiring = BrowserWiring(builder, mainwin, urientry, webkit)
-    urientry.signal_connect[BrowserWiring]("activate", BrowserWiring~uri_activate(), browserwiring)
-    browserwiring.load_uri("https://redvers.github.io/pony-gtk3")
-    browserwiring.activate_uri()
-
-    webkit.load_uri("https://www.google.com")
-
-    mainwin.show_all()
     Gtk.main()
 
 
+class AppCallbacks
+  """
+  When a user performs an action like clicking a button, or hitting return in
+  a text entry field, Gtk generates a signal on that widget.
 
-  fun @runtime_override_defaults(rto: RuntimeOptions) =>
-    rto.ponyminthreads = U32(4)
+  The AppController is responsible during its instantiation for registering all
+  of the events that it is interested in responding to and providing a callback
+  function to be called when executed.
 
+  This class contains
+  """
 
-
-actor BrowserWiring
-  var builder: GtkBuilder
-  var mainwin: GtkWindow
-  var urientry: GtkEntry
-  var webkit: WebKitWebView
-
-  new create(builder': GtkBuilder, mainwin': GtkWindow, urientry': GtkEntry, webkit': WebKitWebView) =>
-    builder  = builder'
-    mainwin  = mainwin'
-    urientry = urientry'
-    webkit   = webkit'
-
-  be load_uri(uri: String) =>
-    @gtk_entry_set_text[None](urientry.gtkwidget(), uri.cstring())
-
-  be activate_uri() =>
-    var uri: String = urientry.get_text()
-    Debug.out(uri)
-    webkit.load_uri("https://ponylang.io")
-
-  fun @uri_activate(urientryref: GObjectREF, wiringtag: BrowserWiring) =>
-    wiringtag.activate_uri()
-
-
-
-
-/*
- *
- *void  webkit_window_properties_get_geometry ()
- gboolean   webkit_window_properties_get_toolbar_visible ()
- gboolean   webkit_window_properties_get_statusbar_visible ()
- gboolean   webkit_window_properties_get_scrollbars_visible ()
- gboolean   webkit_window_properties_get_menubar_visible ()
- gboolean   webkit_window_properties_get_locationbar_visible ()
- gboolean   webkit_window_properties_get_resizable ()
- gboolean   webkit_window_properties_get_fullscreen ()
- *
- *
- *
- *
- *
-    webkit_web_view_can_go_back ()
-
-    webkit_web_view_go_back ()webkit_web_view_can_go_forward ()webkit_web_view_go_forward ()
-
-    webkit_web_view_get_title ()
-
-    webkit_web_view_reload ()
-
-    webkit_web_view_reload_bypass_cache ()webkit_web_view_stop_loading ()
-
-    webkit_web_view_is_loading ()webkit_web_view_get_estimated_load_progress ()webkit_web_view_get_uri ()webkit_web_view_can_execute_editing_command ()
-
-*/
+  fun @activate_uri(urientryref: GObjectREF, controllertag: AppController) => controllertag.activate_uri()
 
 

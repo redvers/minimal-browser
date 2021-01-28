@@ -2,6 +2,7 @@ use "lib:webkit2gtk-4.0"
 use "gtk3"
 use "gobject"
 
+primitive GMainContext
 
 class val WebKitWebView is GtkWidget
   var widget: GObjectREF val

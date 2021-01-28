@@ -13,5 +13,6 @@ pkgs.mkShell {
     lldb_7
     gnome3.webkitgtk
     glade
+    mkdocs
   ];
 }
