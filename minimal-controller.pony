@@ -9,7 +9,6 @@ actor AppController
 
   new create(appmodel': AppModel) => appmodel = appmodel'
     appmodel.urientry.signal_connect[AppController]("activate", AppCallbacks~activate_uri(), this)
-    appmodel.mainwin.show_all()
 
 
 

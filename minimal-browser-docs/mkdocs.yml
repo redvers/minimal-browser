@@ -10,7 +10,7 @@ nav:
   - class AppModel: "minimal-browser-AppModel.md"
   - actor AppController: "minimal-browser-AppController.md"
   - actor Main: "minimal-browser-Main.md"
-  - class AppCallbacks: "minimal-browser-AppCallbacks.md"
+  - primitive AppCallbacks: "minimal-browser-AppCallbacks.md"
 - package builtin:
   - Package: "builtin--index.md"
   - primitive U8: "builtin-U8.md"

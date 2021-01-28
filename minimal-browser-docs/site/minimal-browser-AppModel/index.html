@@ -68,6 +68,9 @@
             
     <li class="toctree-l3"><a href="#appmodel">AppModel</a></li>
     
+
+    <li class="toctree-l3"><a href="#appmodel_1">AppModel</a></li>
+    
         <ul>
         
             <li><a class="toctree-l4" href="#constructors">Constructors</a></li>
@@ -89,7 +92,7 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../minimal-browser-AppCallbacks/">class AppCallbacks</a>
+    <a class="" href="../minimal-browser-AppCallbacks/">primitive AppCallbacks</a>
                 </li>
     </ul>
 	    </li>
@@ -2582,11 +2585,46 @@
               
                 <h1 id="appmodel">AppModel<a class="headerlink" href="#appmodel" title="Permanent link">&para;</a></h1>
 <p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L7">[Source]</a></span></p>
+<h1 id="appmodel_1">AppModel<a class="headerlink" href="#appmodel_1" title="Permanent link">&para;</a></h1>
+<p>The purpose of this class is to be a single structure to contain all of
+the data that the application needs to run.</p>
+<p>The Class is a val because it contains ONLY references to Gtk objects
+which "should never change"™</p>
+<p>Classes in Pony are <strong>Pointers</strong> so can be passed cleanly in and out of
+C functions.  This is how we pass multiple arguments around in callbacks.</p>
+<p>One structure to rule them all.</p>
 <pre><code class="language-pony">class val AppModel
 </code></pre>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L14">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L29">[Source]</a></span></p>
+<p>The Model creates the Application's (Read Only) global state
+which includes all of the Gtk widget data.</p>
+<p>This is how we build our UI:</p>
+<p>1, Read our Glade XML file which contains our UI definition
+and generate all the widgets in memory.</p>
+<pre><code>builder = GtkBuilder.new_from_file(&quot;minimal-browser.glade&quot;)
+</code></pre>
+<p>(The other way to do this is by creating and arranging widgets
+by hand - we chose the easier way for this example).</p>
+<p>2, Create our GtkWindow instance from the GtkBuilder data.</p>
+<pre><code>mainwin = GtkWindow.create_from_GtkBuilder(builder, &quot;GtkWindow&quot;)
+</code></pre>
+<p>3, Create our GtkEntry instance from the GtkBuilder data.</p>
+<pre><code>urientry = GtkEntry.create_from_GtkBuilder(builder, &quot;uri_entrybox&quot;)
+</code></pre>
+<p>4, Create our GtkBox instance from the GtkBuilder data.</p>
+<pre><code>var hbox:     GtkBox    = GtkBox.create_from_GtkBuilder(builder, &quot;hbox&quot;)
+</code></pre>
+<p>(We left an intentional gap in this GtkBox so we can place
+the webkit2 widget in place)</p>
+<p>5, Create the WebKit2 Widget and pack it into the GtkBox</p>
+<pre><code>webkit = WebKitWebView
+hbox.pack_end(webkit, true, true, U32(0))
+</code></pre>
+<p>6, Lastly, we capture the default GMainContext.  This is a tag which
+represents the main Gtk thread so we can use it for future function
+dispatch.</p>
 <pre><code class="language-pony">new val create()
 : AppModel val^
 </code></pre>
@@ -2597,19 +2635,19 @@
 <hr />
 <h2 id="public-fields">Public fields<a class="headerlink" href="#public-fields" title="Permanent link">&para;</a></h2>
 <h3 id="var-builder-gtkbuilder-val">var builder: <a href="../gtk3-GtkBuilder/">GtkBuilder</a> val<a class="headerlink" href="#var-builder-gtkbuilder-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L8">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L23">[Source]</a></span></p>
 <hr />
 <h3 id="var-mainwin-gtkwindow-val">var mainwin: <a href="../gtk3-GtkWindow/">GtkWindow</a> val<a class="headerlink" href="#var-mainwin-gtkwindow-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L9">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L24">[Source]</a></span></p>
 <hr />
 <h3 id="var-urientry-gtkentry-val">var urientry: <a href="../gtk3-GtkEntry/">GtkEntry</a> val<a class="headerlink" href="#var-urientry-gtkentry-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L10">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L25">[Source]</a></span></p>
 <hr />
 <h3 id="var-webkit-webkitwebview-val">var webkit: <a href="../minimal-browser-webkit2gtk-WebKitWebView/">WebKitWebView</a> val<a class="headerlink" href="#var-webkit-webkitwebview-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L11">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L26">[Source]</a></span></p>
 <hr />
 <h3 id="var-gmain-gmaincontext-val">var gmain: <a href="../minimal-browser-webkit2gtk-GMainContext/">GMainContext</a> val<a class="headerlink" href="#var-gmain-gmaincontext-val" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L12">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/minimal-model/#L27">[Source]</a></span></p>
 <hr />
               
             </div>

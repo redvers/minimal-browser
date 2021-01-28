@@ -44,7 +44,7 @@ new tag create(
 ## Public Behaviours
 
 ### activate_uri
-<span class="source-link">[[Source]](src/minimal-browser/minimal-controller.md#L16)</span>
+<span class="source-link">[[Source]](src/minimal-browser/minimal-controller.md#L15)</span>
 
 
 ```pony

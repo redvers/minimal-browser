@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>class AppCallbacks - minimal-browser</title>
+  <title>primitive AppCallbacks - minimal-browser</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "class AppCallbacks";
+    var mkdocs_page_name = "primitive AppCallbacks";
     var mkdocs_page_input_path = "minimal-browser-AppCallbacks.md";
     var mkdocs_page_url = null;
   </script>
@@ -75,7 +75,7 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">class AppCallbacks</a>
+    <a class="current" href="./">primitive AppCallbacks</a>
     <ul class="subnav">
             
     <li class="toctree-l3"><a href="#appcallbacks">AppCallbacks</a></li>
@@ -2570,7 +2570,7 @@
         
       
     
-    <li>class AppCallbacks</li>
+    <li>primitive AppCallbacks</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -2581,23 +2581,37 @@
             <div class="section">
               
                 <h1 id="appcallbacks">AppCallbacks<a class="headerlink" href="#appcallbacks" title="Permanent link">&para;</a></h1>
-<p><span class="source-link"><a href="../src/minimal-browser/main/#L90">[Source]</a></span></p>
-<pre><code class="language-pony">class ref AppCallbacks
+<p><span class="source-link"><a href="../src/minimal-browser/main/#L91">[Source]</a></span></p>
+<p>When a user performs an action like clicking a button, or hitting return in
+a text entry field, Gtk generates a signal on that widget.</p>
+<p>The AppController is responsible during its instantiation for registering all
+of the events that it is interested in responding to and providing a callback
+function to be called when executed.</p>
+<p>This class contains the callbacks in one convenient place.</p>
+<p>Note:</p>
+<ol>
+<li>All callbacks passed to Gtk must be BARE functions (start with an @ symbol)</li>
+<li>The arguments and types pass to the callback are Widget and Signal Dependent!  Check the Docs!</li>
+</ol>
+<pre><code class="language-pony">primitive val AppCallbacks
 </code></pre>
 <h2 id="constructors">Constructors<a class="headerlink" href="#constructors" title="Permanent link">&para;</a></h2>
 <h3 id="create">create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/main/#L90">[Source]</a></span></p>
-<pre><code class="language-pony">new iso create()
-: AppCallbacks iso^
+<p><span class="source-link"><a href="../src/minimal-browser/main/#L91">[Source]</a></span></p>
+<pre><code class="language-pony">new val create()
+: AppCallbacks val^
 </code></pre>
 <h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
 <ul>
-<li><a href="./">AppCallbacks</a> iso^</li>
+<li><a href="./">AppCallbacks</a> val^</li>
 </ul>
 <hr />
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">&para;</a></h2>
 <h3 id="activate_uri">activate_uri<a class="headerlink" href="#activate_uri" title="Permanent link">&para;</a></h3>
-<p><span class="source-link"><a href="../src/minimal-browser/main/#L91">[Source]</a></span></p>
+<p><span class="source-link"><a href="../src/minimal-browser/main/#L109">[Source]</a></span></p>
+<p>This callback is called when the user hits the return key in the Address Bar.</p>
+<p>It's function is to take the value in the Address Bar and direct the WebKit
+Widget to download and display the content at that URI</p>
 <pre><code class="language-pony">fun activate_uri(
   urientryref: GObjectREF val,
   controllertag: AppController tag)
@@ -2611,6 +2625,36 @@
 <h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
 <ul>
 <li><a href="../builtin-None/">None</a> val</li>
+</ul>
+<hr />
+<h3 id="eq">eq<a class="headerlink" href="#eq" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/minimal-browser/main/#L109">[Source]</a></span></p>
+<pre><code class="language-pony">fun box eq(
+  that: AppCallbacks val)
+: Bool val
+</code></pre>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>that: <a href="./">AppCallbacks</a> val</li>
+</ul>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-Bool/">Bool</a> val</li>
+</ul>
+<hr />
+<h3 id="ne">ne<a class="headerlink" href="#ne" title="Permanent link">&para;</a></h3>
+<p><span class="source-link"><a href="../src/minimal-browser/main/#L109">[Source]</a></span></p>
+<pre><code class="language-pony">fun box ne(
+  that: AppCallbacks val)
+: Bool val
+</code></pre>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>that: <a href="./">AppCallbacks</a> val</li>
+</ul>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="../builtin-Bool/">Bool</a> val</li>
 </ul>
 <hr />
               

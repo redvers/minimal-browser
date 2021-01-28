@@ -11,4 +11,4 @@ It's a simple WebKit2 Web Browser.
 * [class AppModel](minimal-browser-AppModel.md)
 * [actor AppController](minimal-browser-AppController.md)
 * [actor Main](minimal-browser-Main.md)
-* [class AppCallbacks](minimal-browser-AppCallbacks.md)
+* [primitive AppCallbacks](minimal-browser-AppCallbacks.md)
