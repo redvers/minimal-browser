@@ -83,11 +83,12 @@ actor Main
 
     var appmodel:      AppModel = AppModel
     var appcontroller: AppController = AppController(appmodel)
+    appmodel.mainwin.show_all()
 
     Gtk.main()
 
 
-class AppCallbacks
+primitive AppCallbacks
   """
   When a user performs an action like clicking a button, or hitting return in
   a text entry field, Gtk generates a signal on that widget.
@@ -96,9 +97,22 @@ class AppCallbacks
   of the events that it is interested in responding to and providing a callback
   function to be called when executed.
 
-  This class contains
+  This class contains the callbacks in one convenient place.
+
+  Note:
+
+  1. All callbacks passed to Gtk must be BARE functions (start with an @ symbol)
+  2. The arguments and types pass to the callback are Widget and Signal Dependent!  Check the Docs!
+
   """
 
-  fun @activate_uri(urientryref: GObjectREF, controllertag: AppController) => controllertag.activate_uri()
+  fun @activate_uri(urientryref: GObjectREF, controllertag: AppController) =>
+    """
+    This callback is called when the user hits the return key in the Address Bar.
+    
+    It's function is to take the value in the Address Bar and direct the WebKit
+    Widget to download and display the content at that URI
+    """
+    controllertag.activate_uri()
 
 
