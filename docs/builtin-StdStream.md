@@ -9,44 +9,6 @@ ensure that access is provided only via an environment.
 actor tag StdStream
 ```
 
-## Constructors
-
-### _out
-<span class="source-link">[[Source]](src/builtin/std_stream.md#L45)</span>
-
-
-Create an async stream for stdout.
-
-
-```pony
-new tag _out()
-: StdStream tag^
-```
-
-#### Returns
-
-* [StdStream](builtin-StdStream.md) tag^
-
----
-
-### _err
-<span class="source-link">[[Source]](src/builtin/std_stream.md#L51)</span>
-
-
-Create an async stream for stderr.
-
-
-```pony
-new tag _err()
-: StdStream tag^
-```
-
-#### Returns
-
-* [StdStream](builtin-StdStream.md) tag^
-
----
-
 ## Public Behaviours
 
 ### print
@@ -127,52 +89,6 @@ Flush any data out to the os (ignoring failures).
 ```pony
 be flush()
 ```
-
----
-
-## Private Functions
-
-### _write
-<span class="source-link">[[Source]](src/builtin/std_stream.md#L91)</span>
-
-
-Write the bytes without explicitly flushing.
-
-
-```pony
-fun ref _write(
-  data: (String val | Array[U8 val] val))
-: None val
-```
-#### Parameters
-
-*   data: ([String](builtin-String.md) val | [Array](builtin-Array.md)\[[U8](builtin-U8.md) val\] val)
-
-#### Returns
-
-* [None](builtin-None.md) val
-
----
-
-### _print
-<span class="source-link">[[Source]](src/builtin/std_stream.md#L97)</span>
-
-
-Write the bytes and a newline without explicitly flushing.
-
-
-```pony
-fun ref _print(
-  data: (String val | Array[U8 val] val))
-: None val
-```
-#### Parameters
-
-*   data: ([String](builtin-String.md) val | [Array](builtin-Array.md)\[[U8](builtin-U8.md) val\] val)
-
-#### Returns
-
-* [None](builtin-None.md) val
 
 ---
 

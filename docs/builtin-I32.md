@@ -1709,20 +1709,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-
-
-
-```pony
-fun box _value()
-: I32 val
-```
-
-#### Returns
-
-* [I32](builtin-I32.md) val
-
----
-

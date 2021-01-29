@@ -1701,20 +1701,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-
-
-
-```pony
-fun box _value()
-: ILong val
-```
-
-#### Returns
-
-* [ILong](builtin-ILong.md) val
-
----
-

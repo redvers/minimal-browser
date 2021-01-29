@@ -62,40 +62,6 @@ new val e()
 
 ---
 
-### _nan
-<span class="source-link">[[Source]](src/builtin/float.md#L6)</span>
-
-
-```pony
-new val _nan()
-: F32 val^
-```
-
-#### Returns
-
-* [F32](builtin-F32.md) val^
-
----
-
-### _inf
-<span class="source-link">[[Source]](src/builtin/float.md#L7)</span>
-
-
-```pony
-new val _inf(
-  negative: Bool val)
-: F32 val^
-```
-#### Parameters
-
-*   negative: [Bool](builtin-Bool.md) val
-
-#### Returns
-
-* [F32](builtin-F32.md) val^
-
----
-
 ### from_bits
 <span class="source-link">[[Source]](src/builtin/float.md#L9)</span>
 
@@ -2066,23 +2032,6 @@ fun box compare(
 #### Returns
 
 * ([Less](builtin-Less.md) val | [Equal](builtin-Equal.md) val | [Greater](builtin-Greater.md) val)
-
----
-
-## Private Functions
-
-### _value
-<span class="source-link">[[Source]](src/builtin/real.md#L211)</span>
-
-
-```pony
-fun box _value()
-: F32 val
-```
-
-#### Returns
-
-* [F32](builtin-F32.md) val
 
 ---
 

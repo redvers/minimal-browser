@@ -18,23 +18,6 @@ unlimited access.
 primitive val AmbientAuth
 ```
 
-## Constructors
-
-### _create
-<span class="source-link">[[Source]](src/builtin/ambient_auth.md#L15)</span>
-
-
-```pony
-new val _create()
-: AmbientAuth val^
-```
-
-#### Returns
-
-* [AmbientAuth](builtin-AmbientAuth.md) val^
-
----
-
 ## Public Functions
 
 ### eq

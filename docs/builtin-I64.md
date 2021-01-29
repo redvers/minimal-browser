@@ -1709,20 +1709,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-
-
-
-```pony
-fun box _value()
-: I64 val
-```
-
-#### Returns
-
-* [I64](builtin-I64.md) val
-
----
-

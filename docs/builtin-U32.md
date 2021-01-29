@@ -1762,20 +1762,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-
-
-
-```pony
-fun box _value()
-: U32 val
-```
-
-#### Returns
-
-* [U32](builtin-U32.md) val
-
----
-

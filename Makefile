@@ -1,6 +1,5 @@
 all:
-	ponyc -d .
+	corral run -- ponyc -d .
 docs:
-	ponyc --docs . 
-	mkdocs build -f minimal-browser-docs/mkdocs.yml -t readthedocs  
+	corral run -- ponyc --docs-public --pass=docs --output=build . 
 

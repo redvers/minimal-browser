@@ -1789,20 +1789,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-
-
-
-```pony
-fun box _value()
-: U128 val
-```
-
-#### Returns
-
-* [U128](builtin-U128.md) val
-
----
-

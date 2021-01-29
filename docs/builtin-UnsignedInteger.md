@@ -1759,20 +1759,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-<span class="source-link">[[Source]](src/builtin/real.md#L211)</span>
-
-
-```pony
-fun box _value()
-: A
-```
-
-#### Returns
-
-* A
-
----
-

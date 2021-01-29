@@ -10,7 +10,7 @@ trait val Real[A: Real[A] val] is
 #### Implements
 
 * [Stringable](builtin-Stringable.md) box
-* [_ArithmeticConvertible](builtin-_ArithmeticConvertible.md) val
+* _ArithmeticConvertible val
 * [Comparable](builtin-Comparable.md)\[A\] ref
 
 ---
@@ -968,23 +968,6 @@ fun box compare(
 #### Returns
 
 * ([Less](builtin-Less.md) val | [Equal](builtin-Equal.md) val | [Greater](builtin-Greater.md) val)
-
----
-
-## Private Functions
-
-### _value
-<span class="source-link">[[Source]](src/builtin/real.md#L211)</span>
-
-
-```pony
-fun box _value()
-: A
-```
-
-#### Returns
-
-* A
 
 ---
 

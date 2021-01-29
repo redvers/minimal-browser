@@ -11,33 +11,6 @@ class val Env
 
 ## Constructors
 
-### _create
-<span class="source-link">[[Source]](src/builtin/env.md#L36)</span>
-
-
-Builds an environment from the command line. This is done before the Main
-actor is created.
-
-
-```pony
-new ref _create(
-  argc: U32 val,
-  argv: Pointer[Pointer[U8 val] ref] val,
-  envp: Pointer[Pointer[U8 val] ref] val)
-: Env ref^
-```
-#### Parameters
-
-*   argc: [U32](builtin-U32.md) val
-*   argv: [Pointer](builtin-Pointer.md)\[[Pointer](builtin-Pointer.md)\[[U8](builtin-U8.md) val\] ref\] val
-*   envp: [Pointer](builtin-Pointer.md)\[[Pointer](builtin-Pointer.md)\[[U8](builtin-U8.md) val\] ref\] val
-
-#### Returns
-
-* [Env](builtin-Env.md) ref^
-
----
-
 ### create
 <span class="source-link">[[Source]](src/builtin/env.md#L57)</span>
 
@@ -140,48 +113,6 @@ be the exit code of the application, which defaults to 0.
 
 
 
-
----
-
-## Private Functions
-
-### _count_strings
-<span class="source-link">[[Source]](src/builtin/env.md#L75)</span>
-
-
-```pony
-fun tag _count_strings(
-  data: Pointer[Pointer[U8 val] ref] val)
-: USize val
-```
-#### Parameters
-
-*   data: [Pointer](builtin-Pointer.md)\[[Pointer](builtin-Pointer.md)\[[U8](builtin-U8.md) val\] ref\] val
-
-#### Returns
-
-* [USize](builtin-USize.md) val
-
----
-
-### _strings_from_pointers
-<span class="source-link">[[Source]](src/builtin/env.md#L90)</span>
-
-
-```pony
-fun tag _strings_from_pointers(
-  data: Pointer[Pointer[U8 val] ref] val,
-  len: USize val)
-: Array[String val] iso^
-```
-#### Parameters
-
-*   data: [Pointer](builtin-Pointer.md)\[[Pointer](builtin-Pointer.md)\[[U8](builtin-U8.md) val\] ref\] val
-*   len: [USize](builtin-USize.md) val
-
-#### Returns
-
-* [Array](builtin-Array.md)\[[String](builtin-String.md) val\] iso^
 
 ---
 

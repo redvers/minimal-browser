@@ -1762,20 +1762,3 @@ fun box compare(
 
 ---
 
-## Private Functions
-
-### _value
-
-
-
-```pony
-fun box _value()
-: U8 val
-```
-
-#### Returns
-
-* [U8](builtin-U8.md) val
-
----
-

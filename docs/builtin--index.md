@@ -81,17 +81,3 @@ entity entries.
 * [class ArrayPairs](builtin-ArrayPairs.md)
 * [interface Any](builtin-Any.md)
 * [primitive AmbientAuth](builtin-AmbientAuth.md)
-
-
-## Private Types
-
-* [primitive _UTF32Encoder](builtin-_UTF32Encoder.md)
-* [trait _ArithmeticConvertible](builtin-_ArithmeticConvertible.md)
-* [primitive _ToString](builtin-_ToString.md)
-* [primitive _SignedArithmetic](builtin-_SignedArithmetic.md)
-* [primitive _SignedUnsafeArithmetic](builtin-_SignedUnsafeArithmetic.md)
-* [primitive _UnsignedCheckedArithmetic](builtin-_UnsignedCheckedArithmetic.md)
-* [primitive _SignedCheckedArithmetic](builtin-_SignedCheckedArithmetic.md)
-* [trait _PartialArithmetic](builtin-_PartialArithmetic.md)
-* [primitive _UnsignedPartialArithmetic](builtin-_UnsignedPartialArithmetic.md)
-* [primitive _SignedPartialArithmetic](builtin-_SignedPartialArithmetic.md)
