@@ -73,9 +73,9 @@ class val AppModel
     builder = GtkBuilder.new_from_file("minimal-browser.glade")
 
     // Extract the Main Window, Address Bar, and Box (for inserting our browser widget)
-    mainwin = GtkWindow.create_from_GtkBuilder(builder, "GtkWindow")
-    urientry = GtkEntry.create_from_GtkBuilder(builder, "uri_entrybox")
-    var hbox:     GtkBox    = GtkBox.create_from_GtkBuilder(builder, "hbox")
+             mainwin = GtkWindow.create_from_GtkBuilder(builder, "GtkWindow")
+            urientry = GtkEntry.create_from_GtkBuilder(builder, "uri_entrybox")
+    var hbox: GtkBox = GtkBox.create_from_GtkBuilder(builder, "hbox")
 
     // Create and pack the browser widget at the end
     webkit = WebKitWebView

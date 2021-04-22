@@ -84,6 +84,7 @@ actor Main
     var appmodel:      AppModel = AppModel
     var appcontroller: AppController = AppController(appmodel)
     appmodel.mainwin.show_all()
+//    @gtk_window_set_interactive_debugging[None](U32(1))
 
     Gtk.main()
 
@@ -114,5 +115,23 @@ primitive AppCallbacks
     Widget to download and display the content at that URI
     """
     controllertag.activate_uri()
+
+  fun @resource_load_started(webkit: GObjectREF, webresource: GObjectREF, weburirequest: GObjectREF, controllertag: AppController) =>
+    var rls: CallbackResourceLoadStarted = CallbackResourceLoadStarted(webkit, webresource, weburirequest, controllertag)
+    controllertag.resource_load_started(rls)
+
+
+primitive WebKitResource
+primitive WebKitURIRequest
+class val CallbackResourceLoadStarted
+  var webkit: GObjectREF
+  var webresource: GObjectREF
+  var weburirequest: GObjectREF
+
+  new val create(webkit': GObjectREF val, webresource': GObjectREF val, weburirequest': GObjectREF val, controllertag': AppController) =>
+    webkit = webkit'
+    webresource = webresource'
+    weburirequest = weburirequest'
+
 
 
