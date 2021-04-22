@@ -14,5 +14,10 @@ pkgs.mkShell {
     gnome3.webkitgtk
     glade
     mkdocs
+    libsoup
   ];
+
+  shellHook = ''
+    export GIO_MODULE_DIR=${glib-networking}/lib/gio/modules
+  '';
 }
